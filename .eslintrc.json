@@ -1,0 +1,53 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true,
+        "node": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb",
+        "react-app"
+    ],
+    "overrides": [
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "react-hooks"
+    ],
+    "rules": {
+        "indent":["error",4],
+        "linebreak-style": "off",
+        "no-alert": "off",
+        "no-underscore-dangle": "off",
+        "import/prefer-default-export": "off",
+        "react/jsx-filename-extension": "off",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn",
+        "react/jsx-props-no-spreading": "off",
+        "react/jsx-indent-props": "off",
+        "react/require-default-props": "off",
+        "react/no-array-index-key": "off",
+        "react/no-danger": "off",
+        "comma-dangle": "off",
+        "quote-props": "off",
+        "no-console": "off",
+        "react/jsx-indent": "off",
+        "no-use-before-define": "off",
+        "react/self-closing-comp": "off",
+        "consistent-return": "off",
+        "no-else-return": "off",
+        "no-param-reassign": "off",
+        "no-useless-return": "off",
+        "react/forbid-prop-types": "off",
+        "react/jsx-no-bind": "off",
+        "max-len": "off",
+        "react/jsx-one-expression-per-line": "off",
+        "jsx-a11y/label-has-associated-control": "off",
+        "import/no-extraneous-dependencies": "off"
+    }
+}
