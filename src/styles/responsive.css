@@ -320,13 +320,13 @@
         width: 450px;
     }
 
-    .thread-detail__owener-name {
+    .thread-detail__owner-name {
         flex-direction: column;
         align-items: flex-start;
         gap: 0;
     }
 
-    .thread-item__owner p:nth-child(even) {
+    .thread-detail__owner-name p:nth-child(even) {
         display: none;
     }
 

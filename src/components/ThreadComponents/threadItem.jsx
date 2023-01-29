@@ -65,7 +65,7 @@ function ThreadItem({
                 <div className="thread-item__owner">
                     <img src={ownerName.avatar} alt={ownerName.name} />
                     <p className="thread-item__user-name">{ownerName.name}</p>
-                    •
+                    <p>•</p>
                     <p className="thread-item__created-at">{postedAt(createdAt)}</p>
                 </div>
                 <Link to={authUser === undefined ? '/login' : `/threads/${id}`} className="thread-item__title">{title}</Link>
