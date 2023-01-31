@@ -347,7 +347,7 @@ const api = (() => {
         }
     }
 
-    async function getAllLeaderBoards() {
+    async function getLeaderBoards() {
         const response = await fetch(`${BASE_URL}/leaderboards`);
 
         const responseJson = await response.json();
@@ -380,7 +380,7 @@ const api = (() => {
         toggleUpVoteCommentThread,
         toggleDownVoteCommentThread,
         toggleNeutralVoteCommentThread,
-        getAllLeaderBoards,
+        getLeaderBoards,
     };
 })();
 
