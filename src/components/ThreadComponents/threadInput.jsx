@@ -79,7 +79,7 @@ function ThreadInput({ addThread, closeModal }) {
                             border: '1px solid #D1D1D1',
                         }}
                     />
-                    <button className="button add-button" type="submit">Tambah Diskusi</button>
+                    <button className="button add-button" type="submit">Tambah</button>
                 </form>
             </div>
         </div>

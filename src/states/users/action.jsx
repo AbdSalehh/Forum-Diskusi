@@ -14,18 +14,10 @@ function receiveUsersActionCreator(users) {
     };
 }
 
-function asyncRegisterUser({
-    name,
-    email,
-    password
-}) {
+function asyncRegisterUser({ name, email, password }) {
     return async (dispatch) => {
         dispatch(showLoading());
-        await api.register({
-            name,
-            email,
-            password
-        });
+        await api.register({ name, email, password });
         dispatch(hideLoading());
     };
 }

@@ -81,7 +81,7 @@ function RegisterInput({ register }) {
                     {showConfirmPassword ? <RxEyeOpen /> : <RxEyeClosed />}
                 </button>
             </div>
-            <button className="submit-button" type="button" onClick={onRegisterHandler}>Register</button>
+            <button className="submit-button" type="button" onClick={onRegisterHandler}>REGISTER</button>
         </form>
     );
 }

@@ -188,6 +188,10 @@
         background-color: transparent;
     }
 
+    .password-error.active {
+        background-color: rgb(247, 25, 54, .5) !important;
+    }
+
     .link-icon {
         display: block;
     }
