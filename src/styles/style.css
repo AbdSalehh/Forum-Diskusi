@@ -120,7 +120,7 @@ header {
 
 .loading {
     position: sticky;
-    top: 0;
+    width: 100%;
 }
 
 .auth-loading-bar {
@@ -682,6 +682,12 @@ header {
 
 /* Detail Page  */
 
+.detail-header__component {
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+}
+
 .detail-header {
     width: 100%;
     display: flex;
@@ -690,8 +696,6 @@ header {
     padding: 20px 100px;
     background-color: var(--card-color);
     border-bottom: 1px solid var(--border-color);
-    position: fixed;
-    z-index: 999;
 }
 
 .detail-header__title {
@@ -1037,6 +1041,15 @@ header {
 }
 
 /* Popup Modal */
+
+.reply-input .ql-editor {
+    min-height: 200px;
+}
+
+.popup-box .ql-editor {
+    height: 240px;
+    background-color: var(--card-color);
+}
 
 .popup-box {
     position: fixed;
