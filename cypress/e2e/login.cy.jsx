@@ -1,6 +1,6 @@
 describe('Login spec', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:5124/login');
+        cy.visit('http://localhost:3000/login');
     });
 
     it('should display login page correctly', () => {
