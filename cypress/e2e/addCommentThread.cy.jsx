@@ -1,6 +1,6 @@
 describe('Add Thread spec', () => {
     beforeEach(() => {
-        cy.visit('http://localhost:5124/login');
+        cy.visit('http://localhost:3000/login');
     });
 
     it('should display error when comment thread is empty', () => {
