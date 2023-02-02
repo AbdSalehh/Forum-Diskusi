@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { asyncUnsetAuthUser } from '../states/auth/action';
 import {
@@ -16,6 +16,7 @@ import ThreadDetailSkeleton from '../components/SkeletonComponents/ThreadDetailS
 import ThreadCommentInputSkeleton from '../components/SkeletonComponents/ThreadCommentInputSkeleton';
 
 function DetailPage({ auth }) {
+    const navigate = useNavigate();
     const { id } = useParams();
     const {
         threadDetail = null,
@@ -30,6 +31,7 @@ function DetailPage({ auth }) {
 
     const onSignOut = () => {
         dispatch(asyncUnsetAuthUser());
+        navigate('/');
     };
 
     const onAddComment = (content) => {

@@ -18,8 +18,6 @@ function ThreadInput({ addThread, closeModal }) {
 
         addThread(title, category, body);
         setBody('');
-        onTitleChange('');
-        onCategoryChange('');
     }
 
     function onCloseModalHandler() {
