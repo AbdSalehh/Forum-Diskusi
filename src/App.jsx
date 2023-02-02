@@ -28,48 +28,31 @@ function App() {
         return null;
     }
 
-    if (authUser === null) {
-        return (
-            <div className="app-container">
-                <ScrollToTop />
-                <main>
-                    <Routes>
-                        <Route path="/" element={<HomePage auth={authUser} />} />
-                        <Route path="/login" element={<LoginPage />} />
-                        <Route path="/register" element={<RegisterPage />} />
-                        <Route path="/leaderboard" element={<LeaderboardsPage auth={authUser} />} />
-                        <Route path="/threads/:id" element={<NotFoundPage />} />
-                        <Route path="*" element={<NotFoundPage />} />
-                    </Routes>
-                </main>
-                <Footer />
-                <ToastContainer
-                    position="top-right"
-                    autoClose={3000}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                />
-            </div>
-        );
-    }
-
     return (
         <div className="app-container">
             <ScrollToTop />
             <main>
-                <Routes>
-                    <Route path="/" element={<HomePage auth={authUser} />} />
-                    <Route path="/threads/:id" element={<DetailPage auth={authUser} />} />
-                    <Route path="/leaderboard" element={<LeaderboardsPage auth={authUser} />} />
-                    <Route path="/login" element={<Navigate replace to="/" />} />
-                    <Route path="/register" element={<Navigate replace to="/" />} />
-                    <Route path="*" element={<NotFoundPage />} />
-                </Routes>
+                {authUser === null
+                    ? (
+                        <Routes>
+                            <Route path="/" element={<HomePage auth={authUser} />} />
+                            <Route path="/login" element={<LoginPage />} />
+                            <Route path="/register" element={<RegisterPage />} />
+                            <Route path="/leaderboard" element={<LeaderboardsPage auth={authUser} />} />
+                            <Route path="/threads/:id" element={<NotFoundPage />} />
+                            <Route path="*" element={<NotFoundPage />} />
+                        </Routes>
+                    )
+                    : (
+                        <Routes>
+                            <Route path="/" element={<HomePage auth={authUser} />} />
+                            <Route path="/threads/:id" element={<DetailPage auth={authUser} />} />
+                            <Route path="/leaderboard" element={<LeaderboardsPage auth={authUser} />} />
+                            <Route path="/login" element={<Navigate replace to="/" />} />
+                            <Route path="/register" element={<Navigate replace to="/" />} />
+                            <Route path="*" element={<NotFoundPage />} />
+                        </Routes>
+                    )}
             </main>
             <Footer />
             <ToastContainer

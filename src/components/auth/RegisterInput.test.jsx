@@ -1,3 +1,14 @@
+/**
+ * test scenario for RegisterInput
+ *
+ * - RegisterInput component
+ *  - should handle name typing correctly
+ *  - should handle email typing correctly
+ *  - should handle password typing correctly
+ *  - should handle confirm password typing correctly
+ *  - should call register function when login button is clicked
+*/
+
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
@@ -5,7 +16,7 @@ import RegisterInput from './registerInput';
 
 import '@testing-library/jest-dom';
 
-describe('LoginInput component', () => {
+describe('RegisterInput component', () => {
     it('should handle name typing correctly', async () => {
         // Arrange
         render(<RegisterInput register={() => { }} />);

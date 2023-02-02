@@ -1,3 +1,11 @@
+/**
+ * test scenario for leaderboardsReducer
+ *
+ * - leaderboardsReducer function
+ *  - should return the initial state when given by unknown action
+ *  - should return the leaderboards when given by RECEIVE_LEADERBOARDS action
+*/
+
 import leaderboardsReducer from './reducer';
 import { ActionType } from './action';
 

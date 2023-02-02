@@ -1,3 +1,17 @@
+/**
+ * test scenario for threadDetailReducer
+ *
+ * - threadDetailReducer function
+ *  - should return the initial state when given by unknown action
+ *  - should return the thread detail when given by RECEIVE_THREAD_DETAIL action
+ *  - should return the thread detail with new comment when given by ADD_COMMENT action
+ *  - should return null when given by CLEAR_THREAD_DETAIL action
+ *  - should return the thread with the toggled like thread when given by TOGGLE_LIKE_THREAD_DETAIL
+ *  - should return the thread with the toggled dislike thread when given by TOGGLE_DISLIKE_THREAD_DETAIL
+ *  - should return the thread with the toggled like comment when given by TOGGLE_LIKE_THREAD_COMMENT action
+ *  - should return the thread with the toggled dislike comment when given by TOGGLE_DISLIKE_THREAD_COMMENT action
+*/
+
 import threadDetailReducer from './reducer';
 import { ActionType } from './action';
 
@@ -224,7 +238,7 @@ describe('threadDetailReducer function', () => {
             payload: {
                 threadId: 'thread-1',
                 commentId: 'comment-1',
-                userId: 'users-2',
+                userId: 'users-3',
                 comment: {
                     id: 'comment-1',
                     content: 'Ini adalah komentar pertama',
