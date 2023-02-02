@@ -241,6 +241,23 @@
     .thread-detail .thread-item__dislike p {
         font-size: 16px;
     }
+
+    .thread-item .thread-item__like button,
+    .thread-item .thread-item__dislike button,
+    .thread-item .thread-item__comment button,
+    .thread-detail .thread-item__comment button {
+        font-size: 19px;
+    }
+
+    .thread-detail .thread-item__button button,
+    .discussion-item .thread-item__button button,
+    .thread-item .thread-item__button button {
+        font-size: 19px;
+    }
+
+    .thread-item .thread-item__button .thread-item__comment {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 700px) {
