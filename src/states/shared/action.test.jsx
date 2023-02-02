@@ -1,3 +1,16 @@
+/**
+ * test scenario for asyncPopulateUsersAndThreads and asyncPopulateLeaderboards
+ *
+ * - asyncPopulateUsersAndThreads thunk
+ *  - should dispatch action correctly when data fetching success
+ *  - should dispatch action and display console correctly when data fetching failed
+
+ * - asyncPopulateLeaderboards thunk
+ *  - should dispatch action correctly when data fetching success
+ *  - should dispatch action and display console correctly when data fetching failed
+
+*/
+
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
 import api from '../../utils/api';
 import { receiveThreadsActionCreator } from '../threads/action';
@@ -107,7 +120,7 @@ describe('asyncPopulateUsersAndThreads thunk', () => {
         expect(dispatch).toHaveBeenCalledWith(hideLoading());
     });
 
-    it('should dispatch action and call alert correctly when data fetching failed', async () => {
+    it('should dispatch action and display console correctly when data fetching failed', async () => {
         // arrange
         // stub implementation
         api.getAllUsers = () => Promise.reject(fakeErrorResponse);

@@ -1,24 +1,8 @@
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
-import { toast } from 'react-toastify';
 import { receiveThreadsActionCreator } from '../threads/action';
 import { receiveUsersActionCreator } from '../users/action';
 import { receiveLeaderBoardsActionCreator } from '../leaderboard/action';
 import api from '../../utils/api';
-import 'react-toastify/dist/ReactToastify.css';
-
-const toastify = (message) => {
-    toast.error(message, {
-        position: 'top-right',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'dark',
-        className: 'toast',
-    });
-};
 
 function asyncPopulateUsersAndThreads() {
     return async (dispatch) => {

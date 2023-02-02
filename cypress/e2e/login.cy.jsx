@@ -1,3 +1,12 @@
+/**
+ * - Login spec
+ *   - should display login page correctly
+ *   - should display toast when email is empty
+ *   - should display toast when password is empty
+ *   - should display toast when email and password are wrong
+ *   - should display homepage when email and password are correct
+*/
+
 describe('Login spec', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/login');
@@ -49,7 +58,7 @@ describe('Login spec', () => {
         });
     });
 
-    it('should display login page when email and password are correct', () => {
+    it('should display homepage when email and password are correct', () => {
     // mengisi Email
         cy.get('input[placeholder="Email"]').type('componentesting@gmail.com');
 

@@ -1,3 +1,9 @@
+/**
+ * - Add Thread spec
+ *   - should display error when comment thread is empty
+ *   - should display the result of the discussion that has been added
+*/
+
 describe('Add Thread spec', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/login');
