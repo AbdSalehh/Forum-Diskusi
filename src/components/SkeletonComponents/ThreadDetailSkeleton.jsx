@@ -17,7 +17,7 @@ function ThreadDetailSkeleton() {
                             <Skeleton width={100} height={20} />
                         </p>
                     </div>
-                    <Skeleton width={400} height={25} />
+                    <Skeleton className="thread-detail__title-skeleton" />
                     <Skeleton width={100} height={18} />
                     <div className="thread-detail__body">
                         <Skeleton count={8} height={20} style={{ 'paddingTop': '20px' }} />

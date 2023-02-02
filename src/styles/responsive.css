@@ -222,6 +222,25 @@
     .popup-box .popup-content {
         width: 500px;
     }
+
+    .thread-detail .thread-item__title {
+        font-size: 20px;
+    }
+
+    .thread-detail__body {
+        font-size: 16px;
+    }
+
+    .thread-item__like button,
+    .thread-item__dislike button,
+    .thread-item__comment button {
+        font-size: 16px;
+    }
+
+    .thread-detail .thread-item__like p,
+    .thread-detail .thread-item__dislike p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -332,6 +351,14 @@
 
     .thread-detail__owner-name p:nth-child(even) {
         display: none;
+    }
+
+    .thread-detail .thread-item__user-name {
+        font-size: 16px;
+    }
+
+    .thread-detail .thread-item__created-at {
+        font-size: 14px;
     }
 
     .not-found__image {
