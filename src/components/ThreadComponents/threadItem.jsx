@@ -68,7 +68,7 @@ function ThreadItem({
                     <p>•</p>
                     <p className="thread-item__created-at">{postedAt(createdAt)}</p>
                 </div>
-                <Link to={authUser === undefined ? '/login' : `/threads/${id}`} className="thread-item__title">{title}</Link>
+                <Link preventScrollReset to={authUser === undefined ? '/login' : `/threads/${id}`} className="thread-item__title">{title}</Link>
                 <div className="thread-item__category">
                     <div className="category">
                         #

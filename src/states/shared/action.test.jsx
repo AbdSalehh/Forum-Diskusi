@@ -1,11 +1,9 @@
 import { hideLoading, showLoading } from 'react-redux-loading-bar';
-import { toast } from 'react-toastify';
 import api from '../../utils/api';
 import { receiveThreadsActionCreator } from '../threads/action';
 import { receiveUsersActionCreator } from '../users/action';
 import { receiveLeaderBoardsActionCreator } from '../leaderboard/action';
 import { asyncPopulateUsersAndThreads, asyncPopulateLeaderboards } from './action';
-import 'react-toastify/dist/ReactToastify.css';
 
 const fakeThreadsResponse = [{
     id: 'thread-1',
@@ -116,15 +114,15 @@ describe('asyncPopulateUsersAndThreads thunk', () => {
         api.getAllThreads = () => Promise.reject(fakeErrorResponse);
         // mock dispatch
         const dispatch = jest.fn();
-        // mock toast
-        toast.error = jest.fn();
+        // mock console
+        console.error = jest.fn();
 
         // action
         await asyncPopulateUsersAndThreads()(dispatch);
 
         // assert
         expect(dispatch).toHaveBeenCalledWith(showLoading());
-        expect(toast.error).toHaveBeenCalledWith(fakeErrorResponse.message);
+        expect(console.error).toHaveBeenCalledWith(fakeErrorResponse.message);
         expect(dispatch).toHaveBeenCalledWith(hideLoading());
     });
 });
@@ -165,15 +163,15 @@ describe('asyncPopulateLeaderboards thunk', () => {
         api.getLeaderBoards = () => Promise.reject(fakeErrorResponse);
         // mock dispatch
         const dispatch = jest.fn();
-        // mock toast
-        toast.error = jest.fn();
+        // mock console
+        console.error = jest.fn();
 
         // action
         await asyncPopulateLeaderboards()(dispatch);
 
         // assert
         expect(dispatch).toHaveBeenCalledWith(showLoading());
-        expect(toast.error).toHaveBeenCalledWith(fakeErrorResponse.message);
+        expect(console.error).toHaveBeenCalledWith(fakeErrorResponse.message);
         expect(dispatch).toHaveBeenCalledWith(hideLoading());
     });
 });

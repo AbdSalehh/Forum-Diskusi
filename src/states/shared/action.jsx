@@ -6,6 +6,20 @@ import { receiveLeaderBoardsActionCreator } from '../leaderboard/action';
 import api from '../../utils/api';
 import 'react-toastify/dist/ReactToastify.css';
 
+const toastify = (message) => {
+    toast.error(message, {
+        position: 'top-right',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'dark',
+        className: 'toast',
+    });
+};
+
 function asyncPopulateUsersAndThreads() {
     return async (dispatch) => {
         dispatch(showLoading());
@@ -16,7 +30,7 @@ function asyncPopulateUsersAndThreads() {
             dispatch(receiveUsersActionCreator(users));
             dispatch(receiveThreadsActionCreator(thread));
         } catch (error) {
-            toast.error(error.message || 'Ups, something went wrong');
+            console.error(error.message || 'Ups, something went wrong');
         }
 
         dispatch(hideLoading());
@@ -31,7 +45,7 @@ function asyncPopulateLeaderboards() {
 
             dispatch(receiveLeaderBoardsActionCreator(leaderboards));
         } catch (error) {
-            toast.error(error.message || 'Ups, something went wrong');
+            console.error(error.message || 'Ups, something went wrong');
         }
         dispatch(hideLoading());
     };
