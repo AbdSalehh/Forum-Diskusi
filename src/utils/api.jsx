@@ -94,7 +94,6 @@ const api = (() => {
         const { status, message } = responseJson;
 
         if (status !== 'success') {
-            toastify(message);
             throw new Error(message);
         }
 

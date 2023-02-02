@@ -3,6 +3,7 @@ import { Routes, Route, Navigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { ToastContainer } from 'react-toastify';
 import { asyncPreloadProcess } from './states/isPreload/action';
+import ScrollToTop from './components/ThreadComponents/scrollToTop';
 import Footer from './components/FooterComponent/footer';
 import LoginPage from './pages/loginPage';
 import RegisterPage from './pages/registerPage';
@@ -30,6 +31,7 @@ function App() {
     if (authUser === null) {
         return (
             <div className="app-container">
+                <ScrollToTop />
                 <main>
                     <Routes>
                         <Route path="/" element={<HomePage auth={authUser} />} />
@@ -58,6 +60,7 @@ function App() {
 
     return (
         <div className="app-container">
+            <ScrollToTop />
             <main>
                 <Routes>
                     <Route path="/" element={<HomePage auth={authUser} />} />

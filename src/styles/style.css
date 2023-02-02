@@ -24,16 +24,14 @@ body {
 header {
     position: fixed;
     width: 100%;
+    background-color: var(--card-color);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 991;
 }
 
 .header {
     padding: 5px 100px;
     background-color: var(--card-color);
-    border-bottom: 1px solid var(--border-color);
-    z-index: 999;
-}
-
-.header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -698,14 +696,6 @@ header {
     border-bottom: 1px solid var(--border-color);
 }
 
-.detail-header__title {
-    text-align: left;
-    width: 473px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .detail-header-left button {
     font-family: 'Quicksand', sans-serif;
     display: flex;
@@ -723,6 +713,14 @@ header {
 
 .detail-header-left button:hover {
     background-color: #e2e2e2;
+}
+
+.detail-header__title {
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 473px;
 }
 
 .arrow-icon {
@@ -1058,7 +1056,7 @@ header {
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.8);
-    z-index: 500;
+    z-index: 999;
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease-in-out;

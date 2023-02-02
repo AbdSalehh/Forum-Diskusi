@@ -241,7 +241,7 @@
     }
 
     .detail-header__title {
-        width: 300px;
+        max-width: 300px;
     }
 
     .comment-content img {
@@ -317,7 +317,7 @@
     }
 
     .detail-header__title {
-        width: 200px;
+        max-width: 200px;
     }
 
     .popup-box .popup-content {
