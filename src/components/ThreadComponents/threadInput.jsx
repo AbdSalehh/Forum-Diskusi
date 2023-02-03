@@ -66,7 +66,7 @@ function ThreadInput({ addThread, closeModal }) {
                         controls={[
                             ['bold', 'italic'],
                             ['underline', 'strike'],
-                            ['link', 'blockquote'],
+                            ['image', 'link', 'blockquote'],
                             ['code', 'codeBlock']
                         ]}
                         sx={{

@@ -290,7 +290,8 @@
         max-width: 300px;
     }
 
-    .comment-content img {
+    .comment-content img,
+    .thread-detail__body img {
         width: 100%;
     }
 }
