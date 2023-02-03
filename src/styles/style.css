@@ -1022,6 +1022,7 @@ header {
 
 .thread-detail__body p {
     display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
