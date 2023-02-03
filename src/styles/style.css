@@ -1020,12 +1020,6 @@ header {
     margin: 0;
 }
 
-.thread-detail__body p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
 .thread-detail__body img {
     width: 70%;
     height: auto;
