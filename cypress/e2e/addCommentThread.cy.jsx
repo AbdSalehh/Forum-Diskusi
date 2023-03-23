@@ -4,7 +4,7 @@
  *   - should display the result of the discussion that has been added
 */
 
-describe('Add Thread spec', () => {
+describe('Add Comment Thread spec', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/login');
     });
